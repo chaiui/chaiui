@@ -16,5 +16,5 @@ Getting started won't be hard, follow the below steps to get the library in your
 Now you can start using the ChaiUI features
 
 ## Useful links
-[API Reference](https://chaiui.com/v0.2/api)
-[Resources](https://chaiui.com/resources)
+* [API Reference](https://chaiui.com/v0.2/api)
+* [Resources](https://chaiui.com/resources)

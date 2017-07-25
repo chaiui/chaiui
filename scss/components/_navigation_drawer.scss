@@ -1,0 +1,29 @@
+.chai-navigation-drawer {
+    position: fixed;
+    height: 100%;
+    left: -1000;
+    top: 0;
+    z-index: 9999;
+    background-color: $color-white;
+    @include box-shadow("right");
+    max-width: 260px;
+    width: 260px;
+    transition: all 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+    -webkit-transition: all 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+
+    & .chai-navigation-drawer-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 9998;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+        -webkit-transition: all 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+    }
+    & .chai-list-item {
+        cursor: pointer;
+    }
+}

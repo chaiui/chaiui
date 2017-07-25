@@ -1,0 +1,108 @@
+%btn {
+    padding: 0 16px;
+    margin: 6px 0;
+    background: transparent;
+    background-clip: padding-box;
+    text-overflow: ellipsis; // will give three dots in the end
+    white-space: nowrap;
+    overflow: hidden;
+    height: auto;
+    text-decoration: none;
+    letter-spacing: 0;
+    vertical-align: middle;
+    border: 0 solid currentColor;
+    border-radius: 2px;
+    min-height: 36px;
+    line-height: 36px;
+    // box-sizing: content-box;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    transform: translate3d(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.25s linear;
+    cursor: pointer;
+    position: relative;
+    max-width: 100%;
+
+    @include unselectable;
+
+    & .material-icons {
+        position: relative;
+        top: 7px;
+        padding-right: 5px;
+    }
+}
+
+.chai-button {
+    min-width: 88px;
+    @extend %btn;
+}
+.chai-button[data-type="normal"] {
+    display: inline-block;
+    background-color: #BCBDBD;
+    color: $color-black;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+
+    &:active {
+        box-shadow: 0 7px 7px 0 rgba(0, 0, 0, .14), 0 3px 7px 0 rgba(0, 0, 0, .12), 0 5px 3px -4px rgba(0, 0, 0, .2);
+    }
+}
+.chai-button[data-type="large"] {
+    display: block;
+    width: 100%;
+    background-color: #BCBDBD;
+    color: $color-black;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+
+    &:active {
+        box-shadow: 0 7px 7px 0 rgba(0, 0, 0, .14), 0 3px 7px 0 rgba(0, 0, 0, .12), 0 5px 3px -4px rgba(0, 0, 0, .2);
+    }
+}
+.chai-button[data-type="flat"] {
+    display: inline-block;
+    color: $color-black;
+    background-color: transparent;
+
+    &:active {
+        background-color: $color-shade;
+    }
+}
+.disabled {
+    cursor: not-allowed;
+    &:active {
+        box-shadow: none;
+    }
+} 
+
+.chai-fab {
+    @extend %btn;
+    display: inline-block;
+    background-color: #BCBDBD;
+    color: $color-black;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 25px;
+    text-overflow: initial;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .4);
+
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    top: auto;
+    z-index: 9;
+
+    & .material-icons {
+        top: 4px;
+        padding-right: 0;
+    }
+    &:active {
+        // box-shadow: 0 4px 5px 1px rgba(0, 0, 0, .2), 0 2px 5px 2px rgba(0, 0, 0, .4), 0 2px 4px -1px rgba(0, 0, 0, .4);
+        box-shadow: 0 6px 10px 0 #AAA;
+    }
+}

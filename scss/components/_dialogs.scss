@@ -1,0 +1,42 @@
+.chai-dialog-alert, .chai-dialog-confirm, .chai-dialog {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+    background-color: $color-white;
+    width: 280px;
+    padding-top: 22px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .4);
+    border-radius: 2px;
+    max-height: 90%;
+    visibility: hidden;
+
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+}
+
+.chai-dialog-alert .title, .chai-dialog-alert .text,
+.chai-dialog-confirm .title, .chai-dialog-confirm .text {
+    padding: 0 24px;
+}
+.chai-dialog-alert .title,
+.chai-dialog-confirm .title {
+    font-weight: 500;
+    font-size: 20px;
+}
+.chai-dialog-alert .text,
+.chai-dialog-confirm .text {
+    margin: 24px auto 10px auto;
+    font-weight: 400;
+    overflow: auto;
+}
+.chai-dialog-alert .chai-button,
+.chai-dialog-confirm .chai-button {
+    float: right;
+    margin: 8px 8px 8px 0;
+    min-width: 50px;
+    color: $color-accent;
+}

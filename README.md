@@ -11,7 +11,7 @@ Getting started won't be hard, follow the below steps to get the library in your
 2. get all the files from `chaiui/src` and move those file to your project
 3. link the CSS, JavaScript and Material Font
 4. after that you need to initialize the ChaiUI before writing any JavaScript code.
-<pre>`ChaiUI.prototype.__init__()`</pre>
+<pre><code>ChaiUI.prototype.__init__()</code></pre>
 
 Now you can start using the ChaiUI features
 
